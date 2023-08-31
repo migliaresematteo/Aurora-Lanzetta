@@ -1,0 +1,212 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+html body {
+  min-height: 100vh;
+}
+
+html body {
+  background-color: #e8e6da;
+}
+html body #mainNav {
+  box-shadow: none;
+  transition: 0.2s ease;
+  background-color: transparent;
+}
+html body #mainNav.navbar-shrink {
+  box-shadow: 0 0.5rem 1rem rgba(224, 224, 212, 0.5);
+  background-color: #e0e0d4 !important;
+}
+html body nav {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  background-color: #e0e0d4;
+  transition: background-color 0.2s ease;
+  font-family: "Montserrat", sans-serif;
+}
+html body nav .navbar-brand {
+  width: 15rem;
+}
+html body nav a {
+  color: #3d262b;
+  opacity: 0.5;
+}
+html body .bg-container {
+  background: url("images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html body .bg-container header {
+  height: 100vh;
+}
+html body .bg-container header .header-title {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #3d262b;
+  opacity: 0.75;
+}
+html body .bg-container header .header-subtitle {
+  color: #b66878;
+  opacity: 0.75;
+  font-size: 1.8rem;
+  font-family: "Meddon", cursive;
+}
+html body .bg-container header .header-cta {
+  color: #b66878;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid rgba(182, 104, 120, 0.75);
+  font-size: 1rem;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+html body .bg-container header .header-cta:hover {
+  color: rgba(61, 38, 43, 0.5);
+}
+html body .bg-container header .header-cta::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: #c98895;
+  z-index: -1;
+  transition: all 1s;
+  opacity: 0.5;
+}
+html body .bg-container header .header-cta:hover::before {
+  width: 205%;
+}
+html body .bg-container header .insta {
+  font-size: 1rem;
+}
+html body .about {
+  background-color: #e4dccc;
+}
+html body .about .about-title {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #3d262b;
+}
+html body .about .about-p {
+  font-family: "Montserrat", sans-serif;
+}
+html body .about .about-p a {
+  color: #c98895;
+  text-decoration: none;
+}
+html body .reviews {
+  background-color: #e8e6da;
+}
+html body .reviews .about-title {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #3d262b;
+}
+html body .reviews .about-p {
+  font-family: "Montserrat", sans-serif;
+}
+html body .reviews .about-p a {
+  color: #c98895;
+  text-decoration: none;
+}
+html body .contacts {
+  background-color: #3d262b;
+}
+html body .contacts .about-title {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #3d262b;
+}
+html body .contacts a, html body .contacts p, html body .contacts svg {
+  color: #c98895;
+  text-decoration: none;
+}
+
+.r169 {
+  aspect-ratio: 16/9 !important;
+  width: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.rounded {
+  border-radius: 0.5rem !important;
+}
+
+@media (width <= 991px) {
+  nav {
+    display: none !important;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .header-title {
+    font-size: 3rem !important;
+    white-space: nowrap;
+  }
+  .header-subtitle {
+    font-size: 0.9rem !important;
+    white-space: nowrap;
+  }
+  .header-cta {
+    font-size: 0.75rem !important;
+    padding: 0.3rem 1rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .header-title {
+    font-size: 4rem !important;
+    white-space: nowrap;
+  }
+  .header-subtitle {
+    font-size: 1.4rem !important;
+    white-space: nowrap;
+  }
+  .header-cta {
+    font-size: 0.75rem !important;
+    padding: 0.3rem 1rem;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .header-title {
+    font-size: 4.4rem !important;
+    white-space: nowrap;
+  }
+  .header-subtitle {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .header-title {
+    font-size: 4.4rem !important;
+    white-space: nowrap;
+  }
+  .header-subtitle {
+    font-size: 1.5rem !important;
+    white-space: nowrap;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .header-title {
+    font-size: 5.2rem !important;
+    white-space: nowrap;
+  }
+  .header-subtitle {
+    font-size: 1.6rem !important;
+    white-space: nowrap;
+  }
+}/*# sourceMappingURL=style.css.map */

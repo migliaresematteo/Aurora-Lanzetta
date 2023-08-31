@@ -1,0 +1,236 @@
+$darkgreen: #3b564d;
+$brown: #3d262b;
+$grey: #e0e0d4;
+$lightgreen: #b9c4b1;
+$neutral-fff: #e8e6da;
+$neutral-fff0: #fff;
+$pink: #b66878;
+$lightpink: #c98895;
+$lightbrown: #e4dccc;
+
+$n-font: 'Montserrat', sans-serif;
+$c-font: 'Meddon', cursive;
+$t-font: 'Alegreya Sans SC', sans-serif;
+
+$big: 4rem;
+$med: 2rem;
+$sml: .75rem;
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+    body {
+        min-height: 100vh;
+    }
+}
+
+html {
+    body {
+        background-color: $neutral-fff;
+        #mainNav {
+			box-shadow: none;
+			transition: 0.2s ease;
+			background-color: transparent;
+		}
+		#mainNav.navbar-shrink {
+			box-shadow: 0 0.5rem 1rem rgba(224, 224, 212, 0.50);
+			background-color: $grey !important;
+		}
+		nav {
+			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.50);
+			background-color: $grey;
+			transition: background-color 0.2s ease;
+            font-family: $n-font;
+            .navbar-brand {
+                width: 15rem;
+            }
+            a {
+                color: $brown;
+                opacity: 0.5;
+            }
+		}
+        .bg-container {
+            background: url('images/bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            header {
+                height: 100vh;
+                .header-title {
+                    font-family: $t-font;
+                    color: $brown;
+                    opacity: 0.75;
+                }
+                .header-subtitle {
+                    color: $pink;
+                    opacity: 0.75;
+                    font-size: $med - calc($med / 10);
+                    font-family: $c-font;
+                }
+                .header-cta {
+                    color: $pink;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    border: 2px solid rgba(182, 104, 120, 0.75);
+                    font-size: 1rem;
+                    font-weight: bold;
+                    background: transparent;
+                    position: relative;
+                    transition: all 1s;
+                    overflow: hidden;
+                    border-radius: 0.5rem;
+                    &:hover {
+                        color: rgba(61, 38, 43, 0.5);
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        height: 100%;
+                        width: 0%;
+                        top: 0;
+                        left: -40px;
+                        transform: skewX(45deg);
+                        background-color: $lightpink;
+                        z-index: -1;
+                        transition: all 1s;
+                        opacity: 0.5;
+                    }
+                    &:hover::before {
+                        width: 205%;
+                    }
+                }
+                .insta {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .about {
+            background-color: $lightbrown;
+            .about-title {
+                font-family: $t-font;
+                color: $brown;
+            }
+            .about-p {
+                font-family: $n-font;
+                a {
+                    color: $lightpink;
+                    text-decoration: none;
+                }
+            }
+        }
+        .reviews {
+            background-color: $neutral-fff;
+            .about-title {
+                font-family: $t-font;
+                color: $brown;
+            }
+            .about-p {
+                font-family: $n-font;
+                a {
+                    color: $lightpink;
+                    text-decoration: none;
+                }
+            }
+        }
+        .contacts {
+            background-color: $brown;
+            .about-title {
+                font-family: $t-font;
+                color: $brown;
+            }
+            a,p,svg {
+                color: $lightpink;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.r169 {
+    aspect-ratio: 16 / 9 !important;
+    width: 100% !important;
+    object-fit: cover;
+}
+
+.rounded {
+    border-radius: .5rem !important;
+}
+
+@media (width <= 991px) {
+    nav {
+        display: none !important;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .header-title {
+        font-size: $big * 0.75 !important;
+        white-space: nowrap;
+    }
+    .header-subtitle {
+        font-size: $sml * 1.2 !important;
+        white-space: nowrap;
+    }
+    .header-cta {
+        font-size: $sml !important;
+        padding: .3rem 1rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .header-title {
+        font-size: $big * 1 !important;
+        white-space: nowrap;
+    }
+    .header-subtitle {
+        font-size: $med * 0.7 !important;
+        white-space: nowrap;
+    }
+    .header-cta {
+        font-size: $sml !important;
+        padding: .3rem 1rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .header-title {
+        font-size: $big * 1.1 !important;
+        white-space: nowrap;
+    }
+    .header-subtitle {
+        font-size: $med;
+        white-space: nowrap;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .header-title {
+        font-size: $big * 1.1 !important;
+        white-space: nowrap;
+    }
+    .header-subtitle {
+        font-size: $sml * 2 !important;
+        white-space: nowrap;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .header-title {
+        font-size: $big * 1.3 !important;
+        white-space: nowrap;
+    }
+    .header-subtitle {
+        font-size: $med * 0.8 !important;
+        white-space: nowrap;
+    }
+}
